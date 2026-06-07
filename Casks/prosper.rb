@@ -14,6 +14,15 @@ cask "prosper" do
 
   app "Prosper.app"
 
+  # Prosper is ad-hoc signed (free distribution, not Apple-notarized), so the
+  # first launch would otherwise hit the Gatekeeper "unidentified developer"
+  # dialog. Strip the quarantine flag on install so `brew install` is
+  # prompt-free. (The app also self-strips on first launch via QuarantineStripper.)
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Prosper.app"]
+  end
+
   zap trash: [
     "~/Library/Preferences/com.prosper.app.plist",
     "~/Library/Application Support/Prosper",
