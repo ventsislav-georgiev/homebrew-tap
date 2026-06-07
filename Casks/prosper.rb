@@ -7,9 +7,9 @@ cask "prosper" do
   desc "Local-LLM inline autocomplete, command palette, and clipboard history"
   homepage "https://github.com/ventsislav-georgiev/prosper"
 
-  # Prosper updates itself in-app via Sparkle. auto_updates true tells Homebrew
-  # the app self-updates, so `brew upgrade` won't fight Sparkle (Ghostty pattern).
-  auto_updates true
+  # No auto_updates: let `brew upgrade` manage Prosper like any other cask
+  # (auto_updates true made Homebrew skip it unless --greedy / named explicitly).
+  # Sparkle still serves in-app updates for users who installed outside Homebrew.
   depends_on macos: ">= :sonoma"
 
   app "Prosper.app"
