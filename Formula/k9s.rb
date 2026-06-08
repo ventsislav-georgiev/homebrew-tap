@@ -5,12 +5,12 @@
 class K9s < Formula
   desc "Kubernetes CLI To Manage Your Clusters In Style!"
   homepage "https://k9scli.io/"
-  version "0.50.18-custom.17"
+  version "0.50.18-custom.18"
 
   on_macos do
     on_arm do
-      url "https://github.com/ventsislav-georgiev/k9s/releases/download/v0.50.18-custom.17/k9s_Darwin_arm64.tar.gz"
-      sha256 "bbccf077e8ac596e77eea3293c40f3cd198540091c4c1ee5c1e55b6b7a30ffba"
+      url "https://github.com/ventsislav-georgiev/k9s/releases/download/v0.50.18-custom.18/k9s_Darwin_arm64.tar.gz"
+      sha256 "3c25f97ac02fb6e5a47f55145bed565f5ca72ed974c025a95dd55e945109e8e1"
 
       def install
         bin.install "k9s"
