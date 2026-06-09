@@ -16,6 +16,6 @@ class Dch < Formula
   end
 
   test do
-    assert_match "detachable terminal session", shell_output("\#{bin}/dch -h")
+    assert_match "detachable terminal session", shell_output("#{bin}/dch -h")
   end
 end
