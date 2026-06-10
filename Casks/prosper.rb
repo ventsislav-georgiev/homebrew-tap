@@ -10,7 +10,7 @@ cask "prosper" do
   # No auto_updates: let `brew upgrade` manage Prosper like any other cask
   # (auto_updates true made Homebrew skip it unless --greedy / named explicitly).
   # Sparkle still serves in-app updates for users who installed outside Homebrew.
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Prosper.app"
 
