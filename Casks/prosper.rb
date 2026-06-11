@@ -1,6 +1,6 @@
 cask "prosper" do
-  version "2.72.0"
-  sha256 "e732226f0ff6ff3a0393af6293f5cc24d97d906ca847709695d253a8354c3f88"
+  version "2.73.0"
+  sha256 "637914acb58dbc3c49bf45060883c40019cf7d3c6435481e6eb216e7896665c7"
 
   url "https://github.com/ventsislav-georgiev/prosper/releases/download/v#{version}/Prosper-#{version}.zip"
   name "Prosper"
