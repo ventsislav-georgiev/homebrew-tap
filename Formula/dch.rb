@@ -5,8 +5,8 @@
 class Dch < Formula
   desc "Detachable terminal session manager with auto-naming and a TUI picker"
   homepage "https://github.com/ventsislav-georgiev/dch"
-  url "https://github.com/ventsislav-georgiev/dch/archive/refs/tags/v0.13.tar.gz"
-  sha256 "5a1b13dd6bc70895b4d3e27589c44a26a1c22b24b68c283459770d3098261c9b"
+  url "https://github.com/ventsislav-georgiev/dch/archive/refs/tags/v0.14.tar.gz"
+  sha256 "a4c81370f403c18a5378cf2283a9fc250c569f6f886abe6ffacab138df4273f7"
   license "GPL-2.0-or-later"
 
   def install
