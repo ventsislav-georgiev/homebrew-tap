@@ -8,8 +8,8 @@
 class DchLite < Formula
   desc "Detachable terminal session manager (lite: no terminal mirror)"
   homepage "https://github.com/ventsislav-georgiev/dch"
-  url "https://github.com/ventsislav-georgiev/dch/archive/refs/tags/v1.18.1.tar.gz"
-  sha256 "b3e8b2a6522b2d492dd9020c4857843357054a82ce15dd30aef0d882da306ad6"
+  url "https://github.com/ventsislav-georgiev/dch/archive/refs/tags/v1.19.0.tar.gz"
+  sha256 "2756aef5653dad11002bd0ecd445ac63eeb8ba8e6e8e88c7dd78bcf41c1909a3"
   license "GPL-2.0-or-later"
 
   conflicts_with "dch", because: "both install a dch binary"
