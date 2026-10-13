@@ -1,0 +1,43 @@
+name: bump ccpool
+
+# ccpool cannot push the new version here when it tags a release -- that needs a
+# cross-repo token -- so the tap looks for itself instead, with the built-in
+# GITHUB_TOKEN and no secret to mint or rotate. Hourly, and on demand.
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          repo=ventsislav-georgiev/ccpool
+          formula=Formula/ccpool.rb
+
+          tag=$(gh api "repos/$repo/releases/latest" --jq .tag_name)
+          url="https://github.com/$repo/archive/refs/tags/$tag.tar.gz"
+          if grep -qF "$url" "$formula"; then
+            echo "formula is already on $tag"
+            exit 0
+          fi
+
+          # -f so a tag with no tarball fails here rather than writing the
+          # sha256 of an error page into the formula.
+          sha=$(curl -fsSL "$url" | sha256sum | cut -d" " -f1)
+          sed -i -E "s|^(  url ).*|\1\"$url\"|; s|^(  sha256 ).*|\1\"$sha\"|" "$formula"
+          grep -qF "$sha" "$formula"   # a sed that matched nothing stops here
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -qam "ccpool ${tag#v}"
+          git push
+          echo "bumped to $tag"
