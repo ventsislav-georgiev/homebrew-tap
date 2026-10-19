@@ -3,8 +3,8 @@ class Ccpool < Formula
 
   desc "Run Claude Code across a pool of accounts, rotating on rate limits"
   homepage "https://github.com/ventsislav-georgiev/ccpool"
-  url "https://github.com/ventsislav-georgiev/ccpool/archive/refs/tags/v1.4.0.tar.gz"
-  sha256 "3bb99daa1ed996d3f49bd3bfb0c6c05c6a370a5ee7b3f45c94c0c768f9f9e16b"
+  url "https://github.com/ventsislav-georgiev/ccpool/archive/refs/tags/v1.5.0.tar.gz"
+  sha256 "5b38b5c8e92282d46f148a0974d4d7017571040eedb3c54495bcbbb1bcbd2269"
   license "MIT"
 
   depends_on "python@3.13"
