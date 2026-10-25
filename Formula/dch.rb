@@ -5,8 +5,8 @@
 class Dch < Formula
   desc "Detachable terminal sessions with a headless agent API"
   homepage "https://github.com/ventsislav-georgiev/dch"
-  url "https://github.com/ventsislav-georgiev/dch/archive/refs/tags/v1.22.0.tar.gz"
-  sha256 "b97062b470b305838604c5e27939ff72bcd672363e298c1db065b9c27e804892"
+  url "https://github.com/ventsislav-georgiev/dch/archive/refs/tags/v1.23.0.tar.gz"
+  sha256 "98becc2bc766a768651e5e59283e8586e8fb54e6bfde5a015f53a58a8e04089f"
   license "GPL-2.0-or-later"
 
   conflicts_with "dch-lite", because: "both install a dch binary"
