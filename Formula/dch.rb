@@ -5,9 +5,17 @@
 class Dch < Formula
   desc "Detachable terminal sessions with a headless agent API"
   homepage "https://github.com/ventsislav-georgiev/dch"
-  url "https://github.com/ventsislav-georgiev/dch/archive/refs/tags/v1.47.0.tar.gz"
-  sha256 "fdb922d7aeb45a301e172657d4ee7d4fbc7389f07ee7e2d5c234873628b6d2d1"
+  url "https://github.com/ventsislav-georgiev/dch/archive/refs/tags/v1.48.0.tar.gz"
+  sha256 "f45830db3fff8be17d5639cf5012ac52f08a5878e1291d242fb8fd6d8866762d"
   license "GPL-2.0-or-later"
+
+  bottle do
+    root_url "https://github.com/ventsislav-georgiev/dch/releases/download/v1.48.0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "2204274d7223283e4d6356fd78c8b5f0215b0b89c77a5a56c59756115be364fd"
+    sha256 cellar: :any_skip_relocation, sonoma: "eb40c6e0dbc15c5819de60f9e61f90a399408d57f8e77e46ccb44df0dde05851"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "292ca3118d484e059234844616750af13469815e025ba39f980438ad69824f8c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "ee5a19f8b70ead307e9438fe118874396b8c5ca7a411431229c9594aa05cb195"
+  end
 
   conflicts_with "dch-lite", because: "both install a dch binary"
 

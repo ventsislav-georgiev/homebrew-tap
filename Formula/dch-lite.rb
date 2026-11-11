@@ -8,9 +8,17 @@
 class DchLite < Formula
   desc "Detachable terminal session manager (lite: no terminal mirror)"
   homepage "https://github.com/ventsislav-georgiev/dch"
-  url "https://github.com/ventsislav-georgiev/dch/archive/refs/tags/v1.47.0.tar.gz"
-  sha256 "fdb922d7aeb45a301e172657d4ee7d4fbc7389f07ee7e2d5c234873628b6d2d1"
+  url "https://github.com/ventsislav-georgiev/dch/archive/refs/tags/v1.48.0.tar.gz"
+  sha256 "f45830db3fff8be17d5639cf5012ac52f08a5878e1291d242fb8fd6d8866762d"
   license "GPL-2.0-or-later"
+
+  bottle do
+    root_url "https://github.com/ventsislav-georgiev/dch/releases/download/v1.48.0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "f89ba08c77da85b66094aa6f7b9a2a963968241a22f5079d8755d929a0357d60"
+    sha256 cellar: :any_skip_relocation, sonoma: "83f290ecd365ccb7429e8cf6e01c65d58bda15757e455f03f3dfdf35a97ecbba"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "d298c63d125083823d9f34255c10f31e668c207dd641f23b6f976f01006a4835"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "2fab6d0ec5b5b54bb6c65250c509cd836c193d153aa083cc082af0fa3b65aa9e"
+  end
 
   conflicts_with "dch", because: "both install a dch binary"
 
