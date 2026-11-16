@@ -8,16 +8,16 @@
 class DchLite < Formula
   desc "Detachable terminal session manager (lite: no terminal mirror)"
   homepage "https://github.com/ventsislav-georgiev/dch"
-  url "https://github.com/ventsislav-georgiev/dch/archive/refs/tags/v1.73.0.tar.gz"
-  sha256 "72ae74fbc95fc1547d945cfc5fed938e51290d49ff3e27122766f2b5820c2473"
+  url "https://github.com/ventsislav-georgiev/dch/archive/refs/tags/v1.74.0.tar.gz"
+  sha256 "f1454a2e67fc725a94dcf19ecfd38e37880d09682650c6a9dd4867c3d0a1e346"
   license "GPL-2.0-or-later"
 
   bottle do
-    root_url "https://github.com/ventsislav-georgiev/dch/releases/download/v1.73.0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "3f04000a32472e1afae165da86edf0ffe99c4b57cbc2ef3f4c2d1873b203103e"
-    sha256 cellar: :any_skip_relocation, sonoma: "206054fb6c6fb59d39964c698f116b8a510ca1088480d1c2931981479c425111"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "6c8695c3a852a6fae16b587f327d58a4e4080d69af2071d48c61be502c134ca0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "d2537c8521e0d2f4cf1207f0fcca23f535c6c138ff4d36caeede57d712e10777"
+    root_url "https://github.com/ventsislav-georgiev/dch/releases/download/v1.74.0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "18d708f095d54b7a7de9db653c21d736e67e8fa64c0681df1a2ce20da2bfb2f7"
+    sha256 cellar: :any_skip_relocation, sonoma: "2481aad6fdcf2e3dea6b0bf6af15c941336705a9dacc853e97a6cf2e56d34a45"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "f38457ba49348b24181bb01bb7da40dc4630e010575991eb65882a76f1effbb8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "17d7d0c8345c7de73f8b0c78e16a060154090d976ad022fa5da80dbc163b280b"
   end
 
   # Bottle tags do not encode glibc: build from source below 2.17.
