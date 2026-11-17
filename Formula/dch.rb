@@ -12,6 +12,7 @@ class Dch < Formula
   bottle do
     root_url "https://github.com/ventsislav-georgiev/dch/releases/download/v1.84.0"
     sha256 cellar: :any_skip_relocation, arm64_sonoma: "ee1dadf139ea2569f710d30c444d127a90017018656290403570e5c323c47c17"
+    sha256 cellar: :any_skip_relocation, sonoma: "4bb97d0aefa888c4168810b0ac61369b073debf8a5403dc99b6355e435b09843"
     sha256 cellar: :any_skip_relocation, arm64_linux: "879ca30be7ab5c1c2f72a12b0b39b0e0ac04a8a6f1a7f02e71b2dec900046bc3"
     sha256 cellar: :any_skip_relocation, x86_64_linux: "eaa154c284982b7288f218cdcd7b5211682e9d06d499ee2831985d63d2f42ea1"
   end
