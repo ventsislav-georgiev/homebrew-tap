@@ -16,6 +16,7 @@ class DchLite < Formula
     root_url "https://github.com/ventsislav-georgiev/dch/releases/download/v1.117.0"
     sha256 cellar: :any_skip_relocation, arm64_sonoma: "bb4abb4bed35c2a48e6d555a0cf4e68348239ccfc734d55a91657e566fffda31"
     sha256 cellar: :any_skip_relocation, sonoma: "9301f47f3ed4fbb1661ffee38ca62bec67f79b10bf7b84eb7afec3b154dfdc34"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "0d0be99b625a13b6425a6ab640ee4431038e9eeba3b26b596d38145b7dd0ca39"
     sha256 cellar: :any_skip_relocation, x86_64_linux: "dbfd10ee676a41052e9a11527282f45a074bd085e1641a0cbbd3633cf6695760"
   end
 
