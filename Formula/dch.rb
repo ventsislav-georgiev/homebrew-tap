@@ -13,6 +13,7 @@ class Dch < Formula
     root_url "https://github.com/ventsislav-georgiev/dch/releases/download/v1.135.0"
     sha256 cellar: :any_skip_relocation, arm64_sonoma: "3de1df8f5f7b7effed91f936d240ac5f12ca86baf69a6a54b424b008c73cc264"
     sha256 cellar: :any_skip_relocation, sonoma: "5e48250887f14fef4be8126425a41b3852e3f8e6510a6c121074a09c485766b3"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "ae7263e5008b6dd21814028d6d0a25a501a6452e691f851a4bdc976f65eb060f"
     sha256 cellar: :any_skip_relocation, x86_64_linux: "d7b399838c12e01c185367af0a04fc9be745f645c5146e58fed3ed663ffa65c0"
   end
 
