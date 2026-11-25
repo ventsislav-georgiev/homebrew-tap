@@ -5,16 +5,15 @@
 class Dch < Formula
   desc "Detachable terminal sessions with a headless agent API"
   homepage "https://github.com/ventsislav-georgiev/dch"
-  url "https://github.com/ventsislav-georgiev/dch/archive/refs/tags/v1.160.0.tar.gz"
-  sha256 "c1cd55f619385f35e076a3ea8de086602b288c9c511faa701e8dfb71ea589a21"
+  url "https://github.com/ventsislav-georgiev/dch/archive/refs/tags/v1.161.0.tar.gz"
+  sha256 "2c67b6cb0107ef2cea0eabc49400df7cff7249f91f87ce1a83519d341e436794"
   license "GPL-2.0-or-later"
 
   bottle do
-    root_url "https://github.com/ventsislav-georgiev/dch/releases/download/v1.160.0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "53b291ff44ad981970b94ded0749221fb07dee27f5d5499120901c5d6422b363"
-    sha256 cellar: :any_skip_relocation, sonoma: "120e940d334a4ebdbcd1ede6eea1ec6a657ed4a67fdff886e69208cc45dfbfbe"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "2a56a506f4f3c4b7f7da2430b0794afe61dd9ebd557600a5266e4430dea3be8b"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "45be0232d55bebeb639d27cbc8639d8f5405408a6ef99e8a638e34b236561c02"
+    root_url "https://github.com/ventsislav-georgiev/dch/releases/download/v1.161.0"
+    sha256 cellar: :any_skip_relocation, sonoma: "8d4e0a513b2e2958b4107daf1b8d5c003d24767cbb00faafc489e192821b815e"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "88204b4ee97d9df9e045964f1a948c8ece80c6abc228190138c00d546850ac4c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "14c1aff79955ce54678e2c8eaeabe79a14b81823ba9f83ed88c9988309e0e4ce"
   end
 
   # Bottle tags do not encode glibc: build from source below 2.28.
