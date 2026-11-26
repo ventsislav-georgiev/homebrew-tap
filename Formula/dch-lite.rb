@@ -8,16 +8,16 @@
 class DchLite < Formula
   desc "Detachable terminal session manager (lite: no terminal mirror)"
   homepage "https://github.com/ventsislav-georgiev/dch"
-  url "https://github.com/ventsislav-georgiev/dch/archive/refs/tags/v1.174.0.tar.gz"
-  sha256 "0f6f42e426954a6516448561023a5f2e04d7e015443326ae0425490adf9f8982"
+  url "https://github.com/ventsislav-georgiev/dch/archive/refs/tags/v1.175.0.tar.gz"
+  sha256 "f4c8082fe09b443ea56c77de8ca982e59b548c2bfe934b3b90301b2e30492915"
   license "GPL-2.0-or-later"
 
   bottle do
-    root_url "https://github.com/ventsislav-georgiev/dch/releases/download/v1.174.0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "3c9d33371f3701e5c5afce514d17febc16613a975bb0cf21a1b45687ca77e4d4"
-    sha256 cellar: :any_skip_relocation, sonoma: "0584576ab117ef8ebdd360549e4e3a5f9459cfd7e03374a68cc16ac0edde0bb3"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "ff84aebdc675f4d5da984173369cbfde6efe5b16c40539233c652ee5140b8217"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "b8ea16ff475e9265210e8de557e4cb2753f749a0c7b83b5b57970c2c2d7cdb0e"
+    root_url "https://github.com/ventsislav-georgiev/dch/releases/download/v1.175.0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "809ea7e40645066f3f5a5c1a04aa3fbc1629a2b24bc7512e82c0ac9c3446d244"
+    sha256 cellar: :any_skip_relocation, sonoma: "b468efdd46b5164da010edd2db22f987125ebb0d557011e72f349395515416dc"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "6a78c27d7269660a9ac17b12f99e734ca5f566b295c57ff68b2656a0c76488eb"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "13cd7c1785601d1044cc7f60bbf19e0e546b903a8e58c275bc97a68bd520fbb4"
   end
 
   # Bottle tags do not encode glibc: build from source below 2.17.
@@ -27,11 +27,6 @@ class DchLite < Formula
       satisfy { OS::Linux::Glibc.system_version >= Version.new("2.17") }
     end
   end
-
-  # X-ray decodes Codex's .jsonl.zst rollouts (#656). Bottles link
-  # libzstd statically; a source build or a Linux bottle built
-  # without libzstd.a uses this one.
-  depends_on "zstd"
 
   conflicts_with "dch", because: "both install a dch binary"
 

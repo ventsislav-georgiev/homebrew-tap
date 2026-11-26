@@ -5,16 +5,16 @@
 class Dch < Formula
   desc "Detachable terminal sessions with a headless agent API"
   homepage "https://github.com/ventsislav-georgiev/dch"
-  url "https://github.com/ventsislav-georgiev/dch/archive/refs/tags/v1.174.0.tar.gz"
-  sha256 "0f6f42e426954a6516448561023a5f2e04d7e015443326ae0425490adf9f8982"
+  url "https://github.com/ventsislav-georgiev/dch/archive/refs/tags/v1.175.0.tar.gz"
+  sha256 "f4c8082fe09b443ea56c77de8ca982e59b548c2bfe934b3b90301b2e30492915"
   license "GPL-2.0-or-later"
 
   bottle do
-    root_url "https://github.com/ventsislav-georgiev/dch/releases/download/v1.174.0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "3873d9d9bdb61bd6b75b9d2c3656f5ce8ac4ebdeccd7e7600b6a862fcdb62c7f"
-    sha256 cellar: :any_skip_relocation, sonoma: "1a55d10550107c0cfc4290b2624363a15188aeff3fa27e29992ced601818ca88"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "dc67f20f4fa5c4c60778ae2e1bd8905f4f4a970ef3d6c0358e3efa3070e06f3e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "441cd35cc8e7c12c53b6948d086ccd641b4679f9f15606dd7793ac69a8c7bdb8"
+    root_url "https://github.com/ventsislav-georgiev/dch/releases/download/v1.175.0"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "064042b4e352f6fd62e3b12ba218c72a8cdbcc5acb1a7acebbaf8706aa246632"
+    sha256 cellar: :any_skip_relocation, sonoma: "13cfc4e63eb2da2b661c17ddd6684356d88cfb0aeac7af07a09b931dfe59cae6"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "719b56765e140d77f47b2f473f29011cbceccfa2bd0b7cb45973cd8edb69dd3f"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "f1220cf82d8eba9ef59b84415355a2087dc1ce88f5735fb8551f8e22f0d6596a"
   end
 
   # Bottle tags do not encode glibc: build from source below 2.28.
@@ -24,11 +24,6 @@ class Dch < Formula
       satisfy { OS::Linux::Glibc.system_version >= Version.new("2.28") }
     end
   end
-
-  # X-ray decodes Codex's .jsonl.zst rollouts (#656). Bottles link
-  # libzstd statically; a source build or a Linux bottle built
-  # without libzstd.a uses this one.
-  depends_on "zstd"
 
   conflicts_with "dch-lite", because: "both install a dch binary"
 
