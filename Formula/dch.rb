@@ -14,6 +14,7 @@ class Dch < Formula
     sha256 cellar: :any_skip_relocation, arm64_sonoma: "f8d38ebf81da0a5a7d31e17a3b2e363761ab664cbe8f56e5498032e24f3e1c81"
     sha256 cellar: :any_skip_relocation, sonoma: "d096a570a2dba6b3502121004bcf9298eb3cd550674be20ece151f5629a893c6"
     sha256 cellar: :any_skip_relocation, arm64_linux: "f9aa22ddc58602f175638a11ec2b4f0f2256ec4a4e7feed77ae80ce3001c4438"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "9ec4955b17832f088c75fd0ee35ccbe40bda97a9990921e215043e28a4befc3a"
   end
 
   # Bottle tags do not encode glibc: build from source below 2.28.
