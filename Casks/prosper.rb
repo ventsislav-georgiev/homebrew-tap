@@ -1,6 +1,6 @@
 cask "prosper" do
-  version "2.180.0"
-  sha256 "0c90d0e021e4a3638204cef0a440fe753a598942a685c7ed6e05117fa34afc29"
+  version "2.181.0"
+  sha256 "688654e6b57c53712cc8140300990c1d7110b9c6639cc9138a559971571c6afa"
 
   url "https://github.com/ventsislav-georgiev/prosper/releases/download/v#{version}/Prosper-#{version}.zip"
   name "Prosper"
@@ -10,7 +10,7 @@ cask "prosper" do
   # No auto_updates: let `brew upgrade` manage Prosper like any other cask
   # (auto_updates true made Homebrew skip it unless --greedy / named explicitly).
   # Sparkle still serves in-app updates for users who installed outside Homebrew.
-  depends_on macos: :sonoma
+  depends_on macos: ">= :sequoia"
 
   app "Prosper.app"
 
